@@ -1,10 +1,10 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.BasicStroke;	//TO-DO: DOUBLE BUFFER
+import java.awt.BasicStroke;
 import java.util.ArrayList;
 public class Ship{
 	private int x,y;
-	private static final double VELOCITY_DECAY=0.6; //MAX_VELOCITY=8
+	private static final double VELOCITY_DECAY=0.6;
 	private static final int ACCELERATION=2;
 	public boolean accelerating=false;
 	public boolean turningRight=false;
@@ -53,7 +53,7 @@ public class Ship{
 		int xPoint[]={(int)(14*Math.cos(angle)+x+0.5),(int)(-10*Math.cos(angle)+8*Math.sin(angle)+x+0.5),(int)(-10*Math.cos(angle)-8*Math.sin(angle)+x+0.5)};
 		int yPoint[]={(int)(14*Math.sin(angle)+y+0.5),(int)(-10*Math.sin(angle)-8*Math.cos(angle)+y+0.5),(int)(-10*Math.sin(angle)+8*Math.cos(angle)+y+0.5)};
 		g2.setStroke(new BasicStroke(2));
-		g2.drawPolygon(xPoint,yPoint,3);//g2.drawOval((int)(x-10+0.5),(int)(y-10+0.5),(int)(2*10),(int)(2*10));
+		g2.drawPolygon(xPoint,yPoint,3);
 	}
 	public void zeroAcceleration(){
 		vy=0;

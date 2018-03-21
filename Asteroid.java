@@ -51,8 +51,8 @@ public class Asteroid{
 	}
 	public void draw(Graphics g){
 		Graphics2D g2=(Graphics2D) g;
-		int xPoint[]=new int[12];//{(int)(14*Math.cos(angle)+x+0.5),(int)(20*Math.cos(angle)+x+0.5)};
-		int yPoint[]=new int[12];//{(int)(14*Math.sin(angle)+y+0.5),(int)(20*Math.sin(angle)+y+0.5)};
+		int xPoint[]=new int[12];
+		int yPoint[]=new int[12];
 		int xOrigin[]={40, 40, 25, 15,  0, -5,-15,-25,-30,-35,15, 15};
 		int yOrigin[]={10,-15,-30,-35, -5,-45,-40,-15, 10, 25,35,  0};
 		if(multiplier!=1)
@@ -66,7 +66,6 @@ public class Asteroid{
 		}
 		g2.setStroke(new BasicStroke(2));
 		g2.drawPolygon(xPoint,yPoint,12);
-		//g2.drawOval((int)(x-radius+0.5),(int)(y-radius+0.5),(int)(2*radius),(int)(2*radius)); 
 	}
 	public static Asteroid createAsteroid(int x,int y,double angle){
 		

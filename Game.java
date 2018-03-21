@@ -16,13 +16,13 @@ public class Game extends JComponent implements KeyListener, Runnable{
 	public static final int WIDTH=1280;
 	public static final int HEIGHT=700;
 	public static int score=0;
-	private static int lives=3;	//TO-DO!
+	private static int lives=3;
 	private boolean paused=false;
 	private boolean gameOver=false;
 	private static boolean registered=false;
 	private static String name=null;
 	private long last;
-	private final long threshold = 160; // 500msec = half second
+	private final long threshold = 160;
 	public static JFrame window;
 	public static Game game;
 	private Thread thread=null;
@@ -84,11 +84,9 @@ public class Game extends JComponent implements KeyListener, Runnable{
 		bg.loop();
 		ship=new Ship();
 		Random x = new Random();
-		//Random y = new Random();
 		Random angle = new Random();
 		for(int i=0;i<10;i++){
 			int xc = x.nextInt(WIDTH-1) + 1;
-			//int yc = y.nextInt(HEIGHT-1) + 1;
 			double th = angle.nextDouble();
 			Asteroid ast=new Asteroid(xc,0,th);
 			asteroids.add(ast);
